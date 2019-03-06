@@ -5,9 +5,6 @@ import { CharacterList } from "../components";
 import { getList } from "../actions";
 
 class CharacterListView extends React.Component {
-  constructor() {
-    super();
-  }
 
   componentDidMount() {
     this.props.getList();
@@ -15,9 +12,11 @@ class CharacterListView extends React.Component {
 
   render() {
     if (this.props.fetching) {
+      return(
       <div>
         <h2>Getting your friends</h2>
       </div>
+      )
     }
     return (
       <div className="CharactersList_wrapper">
