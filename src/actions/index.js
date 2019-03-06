@@ -10,7 +10,7 @@ export const getList = () => dispatch => {
   .then(res => {
     dispatch({ 
       type: SUCCESS, 
-      payload: releaseEvents.data.results });
+      payload: res.data.results });
   })
   .catch(err => {
     dispatch({
